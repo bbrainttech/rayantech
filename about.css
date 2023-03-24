@@ -1,0 +1,396 @@
+body {
+    background: var(--bk);
+}
+
+.abt_txt {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: clamp(2em, 1em + 10vw, 10em);
+    text-align: center;
+    width: 100%;
+    z-index: -1;
+    transition: .2s;
+    --abt:14%;
+    font-family: 'Finger Paint','Rowdies', cursive;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-fill-color: var(--trns);
+    color: var(--main_color);
+}
+.cards {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    margin-top: -5rem;
+    gap: 2em;
+    z-index: 3;
+    flex-wrap: wrap;
+    padding: 0 2em;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.cards>div {
+    height: 23em;
+    width: 20em;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    overflow: hidden;
+}
+
+.cards>div div:first-child {
+    height: 70%;
+    position: relative;
+    overflow: hidden;
+}
+
+.cards>div div:first-child::after {
+    content: var(--n);
+    top: 0;
+    scale: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    place-content: center;
+    color: var(--wt);
+    background: #00000060;
+    transition: var(--normal_trans);
+    font-weight: 800;
+    font-size: 2em;
+    text-transform: capitalize;
+}
+
+.cards>div:hover div:first-child::after {
+    scale: 1;
+    opacity: 1;
+    border-radius: inherit;
+}
+
+.cards>div:hover div:first-child img {
+    scale: 1.5;
+}
+
+.cards>div div:first-child img {
+    height: 100%;
+    width: 100%;
+    transition: 6s linear;
+}
+
+.cards>div div:last-child {
+    display: flex;
+    align-items: center;
+    place-content: center;
+    text-transform: capitalize;
+    font-family: 'Rowdies';
+    height: 30%;
+    font-weight: 100;
+    color: var(--wt);
+    background: linear-gradient(0deg, #000, var(--for_this));
+}
+
+.abt_content {
+    margin: 1em 0;
+    padding: 0 3em;
+}
+
+.abt_content h1 {
+    text-transform: capitalize;
+    text-align: center;
+    font-family: 'poppins','rowdies','Roboto';
+    margin: 1em 0;
+    font-size: clamp(2rem, 1rem + 5vw, 4em);
+    color: var(--wt);
+}
+
+.abt_content>div {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    flex-wrap: wrap;
+    place-content: center;
+
+}
+
+.abt_content>div p {
+    text-align: center;
+    font-size: clamp(.7em, .3em + 2.5vw, 1.1em);
+    width: 80%;
+    color: var(--wt);
+}
+
+.abt_content>div p i {
+    background: -webkit-repeating-linear-gradient(130deg, #10a0f9, #fc7aa7, #f7b261);
+    color: var(--trns);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.abt_content>div p :is(i a, a) {
+    text-decoration: none;
+    color: #3395ff;
+    transition: .5s;
+}
+
+.abt_content>div p i a:hover {
+    color: var(--trns);
+}
+
+.abt_content>div h2 {
+    font-size: clamp(2em, 1em + 5vw, 3em);
+    font-family:  'Rowdies','Roboto','Open Sans';
+    font-weight: 300;
+    margin: 0 2em;
+    color: var(--wt);
+    text-align: center;
+}
+
+.contact {
+    overflow: hidden;
+    margin: 7em 0;
+    padding: 3em 0;
+}
+
+.contact h2 {
+    color: var(--wt);
+    font-family:'Rowdies', 'Poppins';
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 400;
+    font-size: clamp(2em, 1em + 5vw, 5em);
+}
+.contact section{
+    position: relative;
+    display: flex;
+    align-items: center;
+    place-content: center;
+    flex-wrap: wrap;
+}
+.contact section .lf{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact section .lf iframe{
+    width: 45em;
+    height: 30em;
+    margin: 0 1em;
+    border-radius: 10px;
+    border:0;
+    border: solid #fff;
+}
+.contact section .rt{
+    height: 100%;
+    width: 45em;
+}
+.contact section .rt img{
+    height: 100%;
+    width: 100%;
+}
+.contact section .lf form {
+    padding: 4em 1em;
+    width: 45em;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.contact section .lf form>div {
+    position: relative;
+    margin: .7em 0;
+    width: 100%;
+}
+
+.contact section .lf form>div input {
+    outline: 0;
+    width: 100%;
+    padding: .8em .8em .4em .8em;
+    border: 0;
+    border-bottom: .1em solid var(--l);
+    font-size: 1.1em;
+    background: var(--trns);
+    color: var(--wt);
+}
+.contact section .lf form>div em{
+    right: .8em;
+    scale: 0;
+    background: #0000009a;
+    top: .8em;
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    transition: .5s ease;
+    position: absolute;
+}
+.contact section .lf form>div input.suc~em,
+.contact section .lf form>div textarea.suc~em{
+    scale: 1;
+    color: var(--l);
+}
+.contact section .lf form>div:nth-child(3) {
+    margin-top: 4em;
+}
+
+.contact section .lf form>div textarea {
+    outline: 0;
+    border: 0;
+    border: .1em dashed var(--wt);
+    resize: vertical;
+    transition: var(--normal_trans);
+    width: 100%;
+    min-height: 12em;
+    max-height: 45em;
+    background: var(--trns);
+    color: var(--wt);
+    padding: 1em 3em 0 1em;
+    font-family: 'Poppins','Open Sans','Roboto';
+}
+
+.contact section .lf form>div label {
+    position: absolute;
+    pointer-events: none;
+    left: -.5em;
+    top: .7em;
+    border-radius: 5px;
+    color: #b8b5b5;
+    font-size: 1em;
+    padding: 0 .5em;
+    z-index: 3;
+    text-transform: capitalize;
+    transition: var(--normal_trans);
+}
+
+.contact section .lf form>div input.txt~label,
+.contact section .lf form>div input:focus~label {
+    color: var(--l);
+    top: -1.3em;
+    font-size: .8em;
+}
+
+.contact section .lf form>div textarea~label {
+    top: 1em;
+    left: .3em;
+}
+.contact section .lf form>div textarea:focus{
+    border-radius: 5px;
+    border: solid var(--l);
+}
+.contact section .lf form>div textarea::-webkit-scrollbar{
+    width: 0;
+}
+.contact section .lf form>div textarea.txt~label,
+.contact section .lf form>div textarea:focus~label {
+    color: var(--l);
+    top: -.8em;
+    backdrop-filter: blur(3px);
+    left: .5em;
+    font-size: .8em;
+}
+
+.contact section .lf form span {
+    width: 100%;
+    text-align: center;
+}
+
+.contact section .lf form span button {
+    --br: 10px;
+    --bw: 2.5px;
+    appearance: none;
+    position: relative;
+    padding: 1em 2em;
+    border: 0;
+    background: var(--trns);
+    /* backdrop-filter: brightness(1) blur(0); */
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--wt);
+    z-index: 2;
+    width: 100%;
+    margin: 1em 0;
+    border-radius: var(--br);
+}
+.contact section .lf form span button::after{
+   --b-i: linear-gradient(var(--bk),var(--bk));
+   --b-o : content-box, padding-box;
+   content: '';
+   position: absolute;
+   left: 0;top: 0;
+   width: 100%; height: 100%;
+   padding: var(--bw);
+   border-radius: var(--br);
+   background-image: conic-gradient(#488cfb, #29dbbc,#ddf505,#ff9f0e,#e440bb,#655adc,#488cfb);
+   -webkit-mask-image: var(--b-i), var(--b-i);
+   mask-image: var(--b-i), var(--b-i);
+   -webkit-mask-origin: var(--b-o);
+   mask-origin: var(--b-o);
+   -webkit-mask-clip: var(--b-o);
+   mask-clip: var(--b-o);
+   mask-composite:exclude;
+   -webkit-mask-composite:destination-out;
+   filter: hue-rotate(0);
+   animation: rotate-hue linear .5s infinite;
+   animation-play-state: paused;
+}
+.contact section .lf form span button:hover::after{
+    animation-play-state: running;
+}
+@keyframes rotate-hue{
+    to{filter: hue-rotate(1turn);}
+}
+.contact section .lf form span button:active{
+   --bw:1px;
+}
+.contact section .lf form p {
+    margin: 1em;
+    font-size: clamp(.75em, .1em + 2.5vw, 1em);
+    color: var(--wt);
+    transition: var(--normal_trans);
+    scale: 0;
+}
+
+.contact section .lf form p.success {
+    color: var(--success);
+    scale: 1;
+}
+.contact section .lf form p.error {
+    color: var(--danger);
+    scale: 1;
+}
+.max_len{
+    color: var(--main_color);
+    position: absolute;
+    bottom: .5em;
+    right: 1em;
+    font-size: .9em;
+    font-weight: 400;
+}
+.max_len.danger{
+    color: var(--danger);
+}
+.max_len.semi-danger{
+    color: var(--semi-danger);
+}
+@media screen and (max-width:800px) {
+    .abt_content{
+        padding: 0 1em;
+    }
+    .abt_content>div p {
+        width: 100%;
+        text-align: justify;
+    }
+
+}
+@media screen and (max-width:530px) {
+    .abt_txt{
+        --abt:20%;
+    }
+
+}
