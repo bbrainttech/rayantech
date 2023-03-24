@@ -83,7 +83,7 @@ const validate_contact = () => {
         if (email_valid == true && name_valid == true && message_valid == true) { valid = true; } else { valid = false; }
         console.log(name_valid, email_valid, message_valid, valid)
         if (valid) {
-            send_feedback(1, 'message sent.')
+            send_feedback(1, 'comming soon.')
         } else if (name.value.length == 0 || email.value.length == 0 || remove_extraSpace(message.value).length == 0 ) {
             send_feedback(0, "input field can't be empty!");
             name.focus()
